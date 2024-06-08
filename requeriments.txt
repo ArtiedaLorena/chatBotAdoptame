@@ -1,0 +1,7 @@
+streamlit==0.81.1
+nltk==3.6.2
+tensorflow==2.5.0
+keras==2.4.3
+
+Ejecutar pip install -r requirements.txt
+para instalar las dependias
