@@ -1,0 +1,55 @@
+{
+    "intents": [
+      {
+        "tag": "saludo",
+        "patterns": [
+          "Hola",
+          "Hola, ¿cómo estás?",
+          "Buen día"
+        ],
+        "responses": [
+          "¡Hola! Bienvenido a Adoptame, ¿en qué puedo ayudarte hoy?",
+          "Hola, ¿cómo puedo ayudarte con la adopción de una mascota?",
+          "¡Hola! ¿Cómo estás? ¿En qué puedo ayudarte?"
+        ]
+      },
+      {
+        "tag": "mascotas_disponibles",
+        "patterns": [
+          "¿Qué mascotas hay disponibles?",
+          "¿Qué animales puedo adoptar?",
+          "Mostrar mascotas para adopción"
+        ],
+        "responses": [
+          "Puedes ver nuestras mascotas disponibles en nuestra página web o aplicación móvil. También puedo proporcionarte un enlace si lo deseas.",
+          "¡Claro! Tenemos una variedad de mascotas disponibles para adopción. Puedo proporcionarte más información o un enlace para que puedas verlas."
+        ]
+      },
+      {
+        "tag": "proceso_adopcion",
+        "patterns": [
+          "¿Cuáles son los pasos para adoptar una mascota?",
+          "Quiero adoptar, ¿qué debo hacer?",
+          "Cómo adoptar una mascota"
+        ],
+        "responses": [
+          "El proceso de adopción suele involucrar llenar un formulario de solicitud, una entrevista, y posiblemente una visita domiciliaria. ¿Te gustaría más información?",
+          "¡Genial! El proceso de adopción generalmente incluye algunos pasos básicos, como llenar una solicitud y conocer a la mascota. ¿Te gustaría que te explicara más?"
+        ]
+      },
+      {
+        "tag": "contacto",
+        "patterns": [
+          "¿Cuál es su número de teléfono?",
+          "¿Cómo puedo contactarlos?",
+          "Información de contacto"
+        ],
+        "responses": [
+          "Puedes contactarnos llamando al +1-555-123-4567 o enviándonos un correo electrónico a contacto@adoptame.com. ¡Estamos aquí para ayudarte!",
+          "Nuestro número de teléfono es +1-555-123-4567 y nuestro correo electrónico es contacto@adoptame.com. ¡No dudes en ponerte en contacto con nosotros para cualquier pregunta o consulta!"
+        ]
+      }
+    ]
+  }
+  
+  
