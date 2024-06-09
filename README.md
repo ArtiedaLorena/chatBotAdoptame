@@ -23,9 +23,7 @@ Este proyecto es un asistente virtual desarrollado para ayudar a los usuarios in
 
 ## Uso
 
-Ejecuta la aplicación:
-En el bash coloca streamlit run app.py
 
-Una vez que la aplicación esté en ejecución, puedes interactuar con el asistente virtual escribiendo tus preguntas en el chat. El asistente responderá automáticamente proporcionando la información relevante sobre la adopción de mascotas.
+Una vez que la aplicación esté en ejecución, podras verla en tu navegador e interactuar con el asistente virtual escribiendo tus preguntas en el chat. El asistente responderá automáticamente proporcionando la información relevante sobre la adopción de mascotas.
 
 
