@@ -1,31 +1,39 @@
 import streamlit as st
+from chatbot import ChatBot
+
+chatbot = ChatBot()
 
 st.title("👨🏻‍💻 Asistente virtual Adoptame 🐾")
 
+# Inicializar el estado de la sesión para los mensajes y el primer mensaje
 if "messages" not in st.session_state:
-    st.session_state.messages=[]
-if "firs_message" not in st.session_state:
-    st.session_state.first_message= True
+    st.session_state.messages = []
+if "first_message" not in st.session_state:
+    st.session_state.first_message = True
 
-#Muestra historico de mensajes recorriendo un for
-
+# Muestra histórico de mensajes
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-#Comprueba si es el primer mensaje
+# Comprueba si es el primer mensaje
 if st.session_state.first_message:
+    welcome_message = "Hola, ¿cómo puedo ayudarte?"
     with st.chat_message("assistant"):
-        st.markdown("Hola, como puedo ayudarte?")
+        st.markdown(welcome_message)
+    st.session_state.messages.append({"role": "assistant", "content": welcome_message})
+    st.session_state.first_message = False
 
-#Agrega los mensajes al historico
-st.session_state.messages.append({"role": "assistant", "content": "Hola, como puedo ayudarte?"})
-st.session_state.first_message= False
-
-if prompt:= st.chat_input("¿Cómo puedo ayudarte?"):
+# Procesa la entrada del usuario
+if prompt := st.chat_input("¿Cómo puedo ayudarte?"):
     with st.chat_message("user"):
         st.markdown(prompt)
-    st.session_state.messages.append({"role":"user", "content": prompt})
+    st.session_state.messages.append({"role": "user", "content": prompt})
+
+    # Implementación del algoritmo de IA
+    intents = chatbot.predict_class(prompt)
+    res = chatbot.get_response(intents)
+
     with st.chat_message("assistant"):
-        st.markdown(prompt)
-    st.session_state.messages.append({"role":"assitant", "content": prompt})
+        st.markdown(res)
+    st.session_state.messages.append({"role": "assistant", "content": res})
