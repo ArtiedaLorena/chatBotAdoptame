@@ -10,6 +10,9 @@ class ChatBot:
     ERROR_THRESHOLD = 0.25
 
     def __init__(self):
+        # Descargar los datos de NLTK necesarios
+        nltk.download('punkt')
+
         self.lemmatizer = WordNetLemmatizer()
         try:
             with open('intents_spanish.json', 'r', encoding='utf-8') as file:
