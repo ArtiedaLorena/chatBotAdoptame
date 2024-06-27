@@ -12,6 +12,7 @@ class ChatBot:
     def __init__(self):
         # Descargar los datos de NLTK necesarios
         nltk.download('punkt')
+        nltk.download('wordnet')
 
         self.lemmatizer = WordNetLemmatizer()
         try:
